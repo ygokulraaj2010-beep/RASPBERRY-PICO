@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "author": "Gokul",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -180,
+      "left": 320,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": 60,
+      "left": 360,
+      "attrs": { "temperature": "24", "humidity": "40" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": 220,
+      "left": 360,
+      "attrs": { "value": "512" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": 380,
+      "left": 360,
+      "attrs": { "lux": "500" }
+    }
+  ],
+  "connections": [
+    ["lcd1:GND", "pico:GND.1", "black", []],
+    ["lcd1:VCC", "pico:3V3", "red", []],
+    ["lcd1:SDA", "pico:GP4", "green", []],
+    ["lcd1:SCL", "pico:GP5", "gold", []],
+    ["dht1:SDA", "pico:GP16", "cyan", []],
+    ["dht1:VCC", "pico:3V3", "red", []],
+    ["dht1:GND", "pico:GND.2", "black", []],
+    ["pot1:SIG", "pico:GP26", "lime", []],
+    ["pot1:VCC", "pico:3V3", "red", []],
+    ["pot1:GND", "pico:GND.3", "black", []],
+    ["ldr1:AO", "pico:GP27", "purple", []],
+    ["ldr1:VCC", "pico:3V3", "red", []],
+    ["ldr1:GND", "pico:GND.4", "black", []]
+  ]
+}

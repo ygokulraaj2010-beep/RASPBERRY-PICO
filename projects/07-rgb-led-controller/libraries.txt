@@ -1,0 +1,3 @@
+// Wokwi libraries for this project.
+// Lines starting with # are comments. analogWrite()/PWM is built
+// into the Arduino-Pico core, so no external libraries are needed.

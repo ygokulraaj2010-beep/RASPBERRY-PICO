@@ -1,0 +1,5 @@
+# Wokwi project configuration
+# See https://docs.wokwi.com/wokwi-ci/getting-started
+[wokwi]
+version = 1
+author = "Gokul"

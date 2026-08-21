@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "author": "Gokul",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": -80,
+      "left": 300,
+      "attrs": { "lux": "500" }
+    }
+  ],
+  "connections": [
+    ["ldr1:AO", "pico:GP26", "green", []],
+    ["ldr1:VCC", "pico:3V3", "red", []],
+    ["ldr1:GND", "pico:GND.1", "black", []]
+  ]
+}

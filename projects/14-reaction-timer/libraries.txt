@@ -1,0 +1,3 @@
+// Wokwi libraries for this project.
+// Lines starting with # are comments. random()/randomSeed() and
+// millis() are built into Arduino, so no libraries are needed.

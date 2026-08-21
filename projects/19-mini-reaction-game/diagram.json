@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "author": "Gokul",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -80,
+      "left": 340,
+      "attrs": { "color": "white" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -70,
+      "left": 220,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_p1",
+      "top": 60,
+      "left": 300,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_p2",
+      "top": 200,
+      "left": 300,
+      "attrs": { "color": "blue" }
+    }
+  ],
+  "connections": [
+    ["pico:GP15", "r1:1", "green", []],
+    ["r1:2", "led1:A", "green", []],
+    ["led1:C", "pico:GND.1", "black", []],
+    ["btn_p1:1.l", "pico:GP16", "red", []],
+    ["btn_p1:2.l", "pico:GND.2", "black", []],
+    ["btn_p2:1.l", "pico:GP17", "blue", []],
+    ["btn_p2:2.l", "pico:GND.3", "black", []]
+  ]
+}

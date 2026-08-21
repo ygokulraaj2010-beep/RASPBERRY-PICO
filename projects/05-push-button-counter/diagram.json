@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "author": "Gokul",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -20,
+      "left": 300,
+      "attrs": { "color": "blue" }
+    }
+  ],
+  "connections": [
+    ["btn1:1.l", "pico:GP15", "blue", []],
+    ["btn1:2.l", "pico:GND.1", "black", []]
+  ]
+}

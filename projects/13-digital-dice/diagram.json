@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "author": "Gokul",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -140,
+      "left": 320,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -80,
+      "left": 320,
+      "attrs": { "color": "orange" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -20,
+      "left": 320,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led4",
+      "top": 40,
+      "left": 320,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led5",
+      "top": 100,
+      "left": 320,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led6",
+      "top": 160,
+      "left": 320,
+      "attrs": { "color": "purple" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -130,
+      "left": 210,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -70,
+      "left": 210,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": -10,
+      "left": 210,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4",
+      "top": 50,
+      "left": 210,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r5",
+      "top": 110,
+      "left": 210,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r6",
+      "top": 170,
+      "left": 210,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 280,
+      "left": 300,
+      "attrs": { "color": "blue" }
+    }
+  ],
+  "connections": [
+    ["pico:GP10", "r1:1", "red", []],
+    ["r1:2", "led1:A", "red", []],
+    ["pico:GP11", "r2:1", "orange", []],
+    ["r2:2", "led2:A", "orange", []],
+    ["pico:GP12", "r3:1", "gold", []],
+    ["r3:2", "led3:A", "gold", []],
+    ["pico:GP13", "r4:1", "green", []],
+    ["r4:2", "led4:A", "green", []],
+    ["pico:GP14", "r5:1", "cyan", []],
+    ["r5:2", "led5:A", "cyan", []],
+    ["pico:GP15", "r6:1", "magenta", []],
+    ["r6:2", "led6:A", "magenta", []],
+    ["led1:C", "pico:GND.1", "black", []],
+    ["led2:C", "pico:GND.2", "black", []],
+    ["led3:C", "pico:GND.3", "black", []],
+    ["led4:C", "pico:GND.4", "black", []],
+    ["led5:C", "pico:GND.5", "black", []],
+    ["led6:C", "pico:GND.6", "black", []],
+    ["btn1:1.l", "pico:GP16", "blue", []],
+    ["btn1:2.l", "pico:GND.7", "black", []]
+  ]
+}

@@ -1,0 +1,3 @@
+// Wokwi libraries for this project.
+// Lines starting with # are comments. This project uses only
+// built-in Arduino functions, so no external libraries are needed.

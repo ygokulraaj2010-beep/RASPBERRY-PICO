@@ -1,0 +1,3 @@
+// Wokwi libraries for this project.
+// Lines starting with # are comments. Servo is bundled with the
+// Arduino-Pico core, so no external library download is needed.

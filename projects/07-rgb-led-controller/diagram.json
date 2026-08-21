@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "author": "Gokul",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": -20,
+      "left": 350,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_red",
+      "top": -60,
+      "left": 180,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_green",
+      "top": 20,
+      "left": 180,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_blue",
+      "top": 100,
+      "left": 180,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    ["pico:GP13", "r_red:1", "orange", []],
+    ["r_red:2", "rgb1:R", "orange", []],
+    ["pico:GP12", "r_green:1", "green", []],
+    ["r_green:2", "rgb1:G", "green", []],
+    ["pico:GP11", "r_blue:1", "blue", []],
+    ["r_blue:2", "rgb1:B", "blue", []],
+    ["rgb1:COM", "pico:GND.1", "black", []]
+  ]
+}

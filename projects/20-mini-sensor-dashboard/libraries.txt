@@ -1,0 +1,6 @@
+# Wokwi libraries for this project.
+# Lines starting with # are comments.
+# This dashboard needs three libraries:
+LiquidCrystal I2C
+DHT sensor library
+Adafruit Unified Sensor

@@ -1,0 +1,5 @@
+# Wokwi libraries for this project.
+# Lines starting with # are comments.
+# The DHT22 sensor needs these two libraries:
+DHT sensor library
+Adafruit Unified Sensor

@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "author": "Gokul",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -80,
+      "left": 250,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 20,
+      "left": 250,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 120,
+      "left": 250,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -70,
+      "left": 150,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 30,
+      "left": 150,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 130,
+      "left": 150,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    ["pico:GP13", "r1:1", "orange", []],
+    ["r1:2", "led1:A", "orange", []],
+    ["pico:GP14", "r2:1", "gold", []],
+    ["r2:2", "led2:A", "gold", []],
+    ["pico:GP15", "r3:1", "green", []],
+    ["r3:2", "led3:A", "green", []],
+    ["led1:C", "pico:GND.1", "black", []],
+    ["led2:C", "pico:GND.2", "black", []],
+    ["led3:C", "pico:GND.3", "black", []]
+  ]
+}

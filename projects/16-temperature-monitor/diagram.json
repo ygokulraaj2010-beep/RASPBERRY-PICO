@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "author": "Gokul",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -60,
+      "left": 320,
+      "attrs": { "temperature": "24", "humidity": "40" }
+    }
+  ],
+  "connections": [
+    ["dht1:SDA", "pico:GP16", "green", []],
+    ["dht1:VCC", "pico:3V3", "red", []],
+    ["dht1:GND", "pico:GND.1", "black", []]
+  ]
+}

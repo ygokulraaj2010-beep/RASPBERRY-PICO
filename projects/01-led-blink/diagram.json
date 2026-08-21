@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "author": "Gokul",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -60,
+      "left": 250,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 60,
+      "left": 220,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    ["pico:GP15", "r1:1", "green", []],
+    ["r1:2", "led1:A", "green", []],
+    ["led1:C", "pico:GND.1", "black", []]
+  ]
+}
